@@ -18,9 +18,15 @@ Apartment building maintenance is typically an incredibly involved and frustrati
 
 ## Tech Stack
 
-Frontend:
+Frontend: 
+    - React
+    - CSS
+    - JavaScript
 
 Backend:
+    - Node.js
+    - Express
+    - PostgreSQL.
 
 ## Features
 
@@ -30,13 +36,13 @@ Tenants will be able to create a maintenance request by filling out a form. The 
 
 [gif goes here]
 
-### Managers Viewing Maintanence Requests
+### Managers Viewing Maintenence Requests
 
 Managers will be able to see and respond to maintanence requests filled out by all tenants.
 
 [gif goes here]
 
-### Tenants Viewing Maintanence Requests
+### Tenants Viewing Maintenence Requests
 
 Tenants will be able to view **only** their own maintanence requests within the home screen.
 
@@ -58,7 +64,20 @@ Managers will be able to filter and sort maintenance requests by status, urgency
 
 [gif goes here]
 
-### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
+## Additional Features (Stretch Goals)
+
+### Managers Viewing Maintenance Dashboard
+
+Managers will be able to view a dashboard displaying the total number of open, in-progress, and completed maintenance requests, providing a quick overview of building maintenance activity.
+
+[gif goes here]
+
+### Managers Exporting Maintenance Reports
+
+Managers will be able to export maintenance requests as a PDF report for record-keeping, reporting, or board meetings.
+
+[gif goes here]
+
 
 ## Installation Instructions
 

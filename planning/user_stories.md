@@ -10,8 +10,6 @@ Reference the Writing User Stories final project guide in the course portal for 
 
 ## Draft User Stories
 
-[👉🏾👉🏾👉🏾 Include at least at least 10 user stories in this format:]
-
 1) As a Tenant, I want to submit a maintenance request with a description and photos, so that the manager understands the issue clearly.
 2) As a Tenant, I want to view the status of my submitted requests, so that I know whether they've been seen or resolved.
 3) As a Tenant, I want to receive a notification when my request status changes, so that I stay informed without having to check manually.

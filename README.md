@@ -18,15 +18,15 @@ Apartment building maintenance is typically an incredibly involved and frustrati
 
 ## Tech Stack
 
-Frontend: 
-    - React
-    - CSS
-    - JavaScript
+**Frontend**
+- React
+- CSS
+- JavaScript
 
-Backend:
-    - Node.js
-    - Express
-    - PostgreSQL.
+**Backend**
+- Node.js
+- Express
+- PostgreSQL
 
 ## Features
 

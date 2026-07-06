@@ -1,8 +1,8 @@
-# [your app name here]
+# [Lease Track]
 
 CodePath WEB103 Final Project
 
-Designed and developed by: [your names here]
+Designed and developed by: [Jaurice Barber, Gabriela Araujo, Gabriel Restrepo, Shivendra Bhagat,]
 
 🔗 Link to deployed app:
 
@@ -10,11 +10,11 @@ Designed and developed by: [your names here]
 
 ### Description and Purpose
 
-[text goes here]
+LeaseTrack is a maintenance request portal for apartment buildings where residents can submit issues and managers can assign, update, and track requests.
 
 ### Inspiration
 
-[text goes here]
+Apartment building maintenance is typically an incredibly involved and frustrating process, especially when both parties the managers and tenants don't have a good avenue of communication. LeaseTrack aims to alleviate some of the pangs of this process by creating exactly that avenue of communication.
 
 ## Tech Stack
 

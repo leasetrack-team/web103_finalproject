@@ -4,7 +4,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "npm run reset && nodemon server.js",
+    "reset": "node config/reset.js"
   },
   "keywords": [],
   "author": "",

@@ -56,7 +56,7 @@ The `maintenance_request` table stores maintenance tickets submitted by tenants.
 | title | varchar(255) | Short title describing the maintenance issue |
 | description | varchar(255) | Detailed description of the maintenance issue |
 | urgency | enum | Urgency level of the request |
-| status | enum | Current status of the maintenance request |
+| status | enum (`RequestStatus`) | Current status of the maintenance request |
 | created_at | timestamp | Date and time when the request was created; defaults to the current date and time |
 | updated_at | timestamp | Date and time when the request was last updated |
 | resolved_at | timestamp | Date and time when the request was resolved |
@@ -71,8 +71,9 @@ The `request_assignment` table connects maintenance requests with the technician
 | id | integer | Primary key that uniquely identifies the assignment |
 | request_id | integer | Foreign key referencing `maintenance_request.id` |
 | technician_id | integer | Foreign key referencing the assigned technician in `user.id` |
-| status | enum | Current status of the technician assignment |
+| status | enum (`AssignmentStatus`) | Current status of the technician assignment |
 | assigned_at | timestamp | Date and time when the technician was assigned; defaults to the current date and time |
+| estimated_completion_date | timestamp | Estimated date and time when the assigned work will be completed |
 
 ### Entity Relationships
 
@@ -95,9 +96,16 @@ The `request_assignment` table connects maintenance requests with the technician
 - `electrical`
 - `carpentry`
 
-#### `Status`
+#### `RequestStatus`
 
 - `submitted`
+- `assigned`
+- `in_progress`
+- `completed`
+- `cancelled`
+
+#### `AssignmentStatus`
+
 - `assigned`
 - `in_progress`
 - `completed`

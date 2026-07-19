@@ -11,7 +11,8 @@ const createTablesQuery = `
     DROP TABLE IF EXISTS "user";
     DROP TABLE IF EXISTS unit;
 
-    DROP TYPE IF EXISTS status;
+    DROP TYPE IF EXISTS request_status;
+    DROP TYPE IF EXISTS assignment_status;
     DROP TYPE IF EXISTS category;
     DROP TYPE IF EXISTS unit_status;
     DROP TYPE IF EXISTS user_role;
@@ -21,7 +22,8 @@ const createTablesQuery = `
     CREATE TYPE user_role AS ENUM ('tenant', 'technician', 'manager');
     CREATE TYPE category AS ENUM ('plumbing', 'hvac', 'electrical', 'carpentry');
     CREATE TYPE urgency AS ENUM ('low', 'medium', 'high');
-    CREATE TYPE status AS ENUM ('submitted', 'assigned', 'in_progress', 'completed', 'cancelled');
+    CREATE TYPE request_status AS ENUM ('submitted', 'assigned', 'in_progress', 'completed', 'cancelled');
+    CREATE TYPE assignment_status AS ENUM ('assigned', 'in_progress', 'completed', 'cancelled');
 
     CREATE TABLE unit (
         id SERIAL PRIMARY KEY,
@@ -51,7 +53,7 @@ const createTablesQuery = `
         title VARCHAR(255) NOT NULL,
         description VARCHAR(255) NOT NULL,
         urgency urgency NOT NULL,
-        status status NOT NULL,
+        status request_status NOT NULL,
         created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP,
         resolved_at TIMESTAMP,
@@ -62,7 +64,7 @@ const createTablesQuery = `
         id SERIAL PRIMARY KEY,
         request_id INTEGER NOT NULL REFERENCES maintenance_request(id),
         technician_id INTEGER NOT NULL REFERENCES "user"(id),
-        status status NOT NULL,
+        status assignment_status NOT NULL,
         assigned_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
         estimated_completion_date TIMESTAMP
     );
